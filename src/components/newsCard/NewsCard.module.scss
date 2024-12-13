@@ -1,0 +1,43 @@
+.NewsCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  transition: box-shadow 0.2s linear;
+  &:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  &__img {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    object-fit: cover;
+  }
+  &__wrapper {
+    height: 100px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    &__title {
+      font-size: 18px;
+      color: #090909;
+    }
+    &__text {
+      font-size: 14px;
+      color: #090909;
+    }
+  }
+  &__date {
+    font-size: 12px;
+    color: grey;
+  }
+}

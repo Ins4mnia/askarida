@@ -1,0 +1,125 @@
+.Header {
+  @media (max-width: 568px) {
+    display: none;
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 100px;
+  justify-content: space-between;
+  animation: color-change-border 5s infinite;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+  &__link {
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  &__logo {
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &__tick {
+      animation: color-change 5s infinite;
+      font-weight: 600;
+    }
+  }
+}
+
+.Header__mobile {
+  @media (min-width: 568px) {
+    display: none;
+  }
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 100px;
+  justify-content: space-between;
+  animation: color-change-border 5s infinite;
+  &__logo {
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &__tick {
+      animation: color-change 5s infinite;
+      font-weight: 600;
+    }
+  }
+  &__burger {
+    background-color: inherit;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #329704;
+  }
+  50% {
+    color: #161518;
+  }
+  100% {
+    color: #329704;
+  }
+}
+
+.Burger.active {
+  display: block;
+}
+
+.Burger {
+  box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 100;
+  width: 300px;
+  position: absolute;
+  background-color: #161518;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  &__close {
+    background-color: inherit;
+    padding: 5px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    margin: 50px 50px 0px;
+    color: #f9f9f9;
+    border: 1px solid #329704;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    &__link {
+      color: #f9f9f9;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 23.5px;
+      animation: color-change-border 5s infinite;
+    }
+  }
+}
+
+@keyframes color-change-border {
+  0% {
+    border-bottom: 1px solid #329704;
+  }
+  50% {
+    border-bottom: 1px solid #161518;
+  }
+  100% {
+    border-bottom: 1px solid #329704;
+  }
+}

@@ -1,0 +1,35 @@
+.store__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 15px;
+  .store {
+    &__input {
+      outline: 0;
+      border: 0;
+      animation: color-change-border 5s infinite;
+      padding: 20px;
+      font-size: 24px;
+      border-radius: 20px;
+    }
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+    @media (max-width: 568px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@keyframes color-change-border {
+  0% {
+    border: 2px solid blue;
+  }
+  50% {
+    border: 2px solid red;
+  }
+  100% {
+    border: 2px solid blue;
+  }
+}
